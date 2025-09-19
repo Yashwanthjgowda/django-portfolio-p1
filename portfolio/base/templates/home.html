@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar" class="flex s-around bg-color">
+        <div class="left-nav">
+            <h2 class="t-white">Portfolio</h2>
+        </div>
+        <div class="right-nav">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#Projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="flex s-around sw-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="poppinss">Hi, I'm</h6>
+                <h1 class="t-white">Yashwanth J</h1>
+                <h4 class="poppinss">AI, Data Science, Generative AI, and Django Developer</h4>
+                <a href="{% static 'pdf/YASHWANTH_J_RESUME.pdf' %}" target="_blank">
+                    <button class="btn poppins">Resume</button>
+                </a>
+                <a class="btn live poppins" id="hireme" href="mailto:yashwanthshobhaj@gmail.com" target="_blank">Let's Talk</a>
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainImage">
+                <img src="{% static 'images/mypic.png' %}" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2">About Me</h1>
+        <div class="about-container flex s-around">
+            <div class="about-left flex s-center items-center">
+                <img src="{% static 'images/dog.png' %}" alt="Secondary Image" style="width: 60%;">
+            </div>
+            <div class="about-right flex">
+                <div class="about-content">
+                    <h1 class="t-white m-b-1 poppins">Yashwanth J</h1>
+                    <p class="t-white poppins">
+                        I am an aspiring AI and Data Science professional with a strong foundation in Generative AI, NLP, and Prompt Engineering. I hold a B.E. in Artificial Intelligence & Machine Learning from Vivekananda Institute of Technology. I am passionate about building intelligent systems that solve real-world problems and am seeking opportunities to apply my technical skills in a dynamic and growth-oriented environment. 
+                    </p>
+                    <a class="btn" id="hireme" href="mailto:yashwanthshobhaj@gmail.com">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1 class="t-center my-2 t-white f-2">Skills</h1>
+        <div class="services-container flex s-around h-50">
+            <div class="skills-left flex s-center items-center">
+                <img src="{% static 'images/pro.png' %}" alt="Skills Image">
+            </div>
+            <div class="skills-right flex items-center">
+                <div class="skillss-container">
+                    <div class="bar p-relative"><span class="bar-content left t-white">Python</span><span class="bar-content right-skills t-white">90%</span></div>
+                    <div class="bar p-relative"><span class="bar-content left t-white">Numpy & Pandas</span><span class="bar-content right-skills t-white">85%</span></div>
+                    <div class="bar p-relative"><span class="bar-content left t-white">Generative AI & NLP</span><span class="bar-content right-skills t-white">80%</span></div>
+                    <div class="bar p-relative"><span class="bar-content left t-white">Hugging Face & LangChain</span><span class="bar-content right-skills t-white">75%</span></div>
+                    <div class="bar p-relative"><span class="bar-content left t-white">SQL</span><span class="bar-content right-skills t-white">70%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Projects">
+        <h1 class="t-center my-2 t-white f-2">Projects</h1>
+        <div class="projects-container flex s-center">
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">AI Resume Analyzer</h1>
+                <p class="t-white poppins">
+                    Built a web app to analyze resumes and provide ATS feedback using Gemini LLM. It allows users to upload resumes, receive optimization suggestions, and visualize a score-based breakdown. 
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/Yashwanthjgowda/AI-Resume-Analyzer-using-Google-Gemini-AI-Streamlit" target="_blank" class="btn mx-1 m-top">GitHub</a>
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">Agentic RAG Chatbot</h1>
+                <p class="t-white poppins">
+                    Developed an interactive chatbot using Google Gemini 1.5 Flash and LangChain Agents, integrating FAISS vector search for document-based responses.
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/Yashwanthjgowda/Agentic_RAG" target="_blank" class="btn mx-1 m-top">GitHub</a>
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">n8n Automation Workflow</h1>
+                <p class="t-white poppins">
+                    Designed and deployed automation workflows using n8n and AI agents for repetitive business tasks, with integration to services like Gmail and Gemini LLM.
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://www.linkedin.com/posts/yashwanth-j-3ab20b2ba_n8n-automation-workflowautomation-activity-7354458879608438784-BMfl" target="_blank" class="btn mx-1 m-top">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="m-b-1">
+        <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+        <div class="message-container t-center my-2">
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="poppins {% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="contact-container flex s-around items-center">
+            <div class="form" id="contactForm">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" class="poppins" placeholder="Enter Your Name">
+                    </div>
+                    <div class="email form-div">
+                        <input type="email" name="email" class="poppins" placeholder="Enter Your Email" required>
+                    </div>
+                    <div class="phone form-div">
+                        <input type="phone" name="number" class="poppins" placeholder="Enter Your Phone" required>
+                    </div>
+                    <div class="textarea form-div">
+                        <textarea name="content" cols="30" rows="10" class="poppins" placeholder="Enter Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppinss">Home</a></li>
+            <li><a href="#about" class="poppinss">About</a></li>
+            <li><a href="#skills" class="poppinss">Skills</a></li>
+            <li><a href="#Projects" class="poppinss">Projects</a></li>
+            <li><a href="#Contact" class="poppinss">Contact</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome">
+            <a href="https://www.linkedin.com/in/yashwanth-j-3ab20b2ba" target="_blank"><li><i class="fa-brands fa-linkedin-in"></i></li></a>
+            <a href="https://github.com/YashwanthShobhaJ" target="_blank"><li><i class="fa-brands fa-github"></i></li></a>
+            <a href="#" target="_blank"><li><i class="fa-brands fa-instagram"></i></li></a>
+        </ul>
+        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Error By Night</span></p>
+    </footer>
+</body>
+</html>
